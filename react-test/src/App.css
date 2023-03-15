@@ -1,0 +1,16 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px 200px 2px 200px;
+}
+#root{
+  width: 842px;
+  height: 500px;
+  background-color: rgb(220, 228, 228);
+  /* border: 1px solid; */
+}
+#registry{
+  margin-top: 50px;
+  width: auto;
+}
