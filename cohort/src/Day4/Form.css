@@ -1,0 +1,35 @@
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    /* text-align: center; */
+    color: black;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.container{
+   display: flex;
+   flex-direction: row;
+   border: 0.5px solid grey;
+   /* gap: 30px; */
+   padding: 10px 50px 10px 50px;
+
+}
+.formhead{
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+.formlogo{
+    display: block;
+    padding-left: 40px;
+}
+.formaccountlogo{
+    width: 300px;
+    height: auto;
+}
+
+
