@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>const obj = {
+  "firstName": "Jay",
+  "lastName": "Pratap",
+  "automobile.make": "Honda",
+  "automobile.model": "Civic",
+  "automobile.revisions.0.miles": 10150,
+  "automobile.revisions.0.code": "REV01",
+  "automobile.revisions.0.changes": "",
+  "automobile.revisions.1.miles": 20021,
+  "automobile.revisions.1.code": "REV02",
+  "automobile.revisions.1.changes.0.type": "asthetic",
+  "automobile.revisions.1.changes.0.desc": "Left tire cap",
+  "automobile.revisions.1.changes.1.type": "mechanic",
+  "automobile.revisions.1.changes.1.desc": "Engine pressure regulator",
+  "visits.0.date": "2015-01-01",
+  "visits.0.dealer": "DEAL-001",
+  "visits.1.date": "2015-03-01",
+  "visits.1.dealer": "DEAL-002"
+};
+
+const result = Object.entries(obj).reduce((acc, [key, value]) => {
+  const keys = key.split(".");
+  const lastKeyIndex = keys.length - 1;
+
+  keys.reduce((nestedObj, currentKey, index) => {
+    if (!nestedObj[currentKey]) {
+      nestedObj[currentKey] = {};
+    }
+
+    if (index === lastKeyIndex) {
+      nestedObj[currentKey] = value;
+    }
+
+    return nestedObj[currentKey];
+  }, acc);
+
+  return acc;
+}, {});
+
+console.log(result);
+  
+</body>
+<script>
+  const obj = {
+    "firstName": "Jay",
+    "lastName": "Pratap",
+    "automobile.make": "Honda",
+    "automobile.model": "Civic",
+    "automobile.revisions.0.miles": 10150,
+    "automobile.revisions.0.code": "REV01",
+    "automobile.revisions.0.changes": "",
+    "automobile.revisions.1.miles": 20021,
+    "automobile.revisions.1.code": "REV02",
+    "automobile.revisions.1.changes.0.type": "asthetic",
+    "automobile.revisions.1.changes.0.desc": "Left tire cap",
+    "automobile.revisions.1.changes.1.type": "mechanic",
+    "automobile.revisions.1.changes.1.desc": "Engine pressure regulator",
+    "visits.0.date": "2015-01-01",
+    "visits.0.dealer": "DEAL-001",
+    "visits.1.date": "2015-03-01",
+    "visits.1.dealer": "DEAL-002"
+  };
+
+const result = Object.entries(obj).reduce((acc, [key, value]) => {
+    const keys = key.split(".");
+    const lastKeyIndex = keys.length - 1;
+  
+    keys.reduce((nestedObj, currentKey, index) => {
+      if (!nestedObj[currentKey]) {
+        nestedObj[currentKey] = {};
+      }
+  
+      if (index === lastKeyIndex) {
+        nestedObj[currentKey] = value;
+      }
+  
+      return nestedObj[currentKey];
+    }, acc);
+  
+    return acc;
+  }, {});
+  
+  console.log(result);
+
+</script>
+</html>
