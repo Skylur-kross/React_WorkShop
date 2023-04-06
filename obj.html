@@ -46,7 +46,28 @@ const result = Object.entries(obj).reduce((acc, [key, value]) => {
 }, {});
 
 console.log(result);
-  
+ <div>
+  ALgo
+Step 1:- Initialize an empty object called "result".
+Step 2:- Iterate through each key-value pair in the input object "obj" using Object.entries().
+Step 3:- For each key-value pair, split the key by "." to get an array of nested keys.
+Step 4:- Iterate through the array of nested keys using reduce().
+Step 5:- For each nested key, check if it exists as a property in the accumulator object "acc". If it does not, create an empty object as its value.
+Step 6:- If the nested key is the last key in the array, set its value in the accumulator object "acc" to the corresponding value in the input object "obj".
+Step 7:- Return the nested object for the current key from the reduce() function.
+Step 8:- Finally, return the accumulator object "acc" as the final result.
+ </div>
+<!-- ALgo
+Step 1:- Initialize an empty object called "result".
+Step 2:- Iterate through each key-value pair in the input object "obj" using Object.entries().
+Step 3:- For each key-value pair, split the key by "." to get an array of nested keys.
+Step 4:- Iterate through the array of nested keys using reduce().
+Step 5:- For each nested key, check if it exists as a property in the accumulator object "acc". If it does not, create an empty object as its value.
+Step 6:- If the nested key is the last key in the array, set its value in the accumulator object "acc" to the corresponding value in the input object "obj".
+Step 7:- Return the nested object for the current key from the reduce() function.
+Step 8:- Finally, return the accumulator object "acc" as the final result. -->
+
+
 </body>
 <script>
   const obj = {
