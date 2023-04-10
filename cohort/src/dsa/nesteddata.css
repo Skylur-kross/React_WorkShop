@@ -1,0 +1,21 @@
+.tree-view {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    list-style: none;
+  }
+  
+  .tree-view .parent {
+    cursor: pointer;
+  }
+  
+  .tree-view ul {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid #ddd;
+  }
+  
+  .tree-view ul ul {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
